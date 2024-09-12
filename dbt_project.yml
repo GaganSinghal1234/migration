@@ -1,0 +1,23 @@
+name: "gagansinghal"
+version: "1.0.0"
+
+profile: "gagansinghal"
+
+model-paths: ["models/migration"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  gagansinghal:
+    +schema: gagan
+    silver:
+      description: "Cleaned and transformed data from the bronze table."
+    gold:
+      description: "Business-ready data for reporting and analytics."

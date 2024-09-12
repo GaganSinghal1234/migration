@@ -1,0 +1,1 @@
+SELECT * FROM {{ source('gagan', 'online_retail_ii') }}
